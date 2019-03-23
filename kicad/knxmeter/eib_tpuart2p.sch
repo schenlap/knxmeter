@@ -1,0 +1,408 @@
+EESchema Schematic File Version 4
+LIBS:knxmeter-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L mylib:TPUART2+ U1
+U 1 1 5C95DAB2
+P 4650 3300
+F 0 "U1" H 4850 4325 50  0000 C CNN
+F 1 "TPUART2+" H 4850 4234 50  0000 C CNN
+F 2 "" H 4650 3300 50  0001 C CNN
+F 3 "/home/steve/prj/knxmeter/documentation/datasheet/TPUART2__Datenblatt_20130806.pdf" H 4650 3300 50  0001 C CNN
+	1    4650 3300
+	1    0    0    -1  
+$EndComp
+Text Notes 8150 7650 0    50   ~ 0
+2019-03-23
+Text Notes 7400 7500 0    50   ~ 0
+KNXMETER
+Text Notes 10650 7650 0    50   ~ 0
+V00R00
+Wire Wire Line
+	4300 4200 4100 4200
+Wire Wire Line
+	4100 4200 4100 4100
+Wire Wire Line
+	4100 4100 4300 4100
+Wire Wire Line
+	4100 4100 4100 3700
+Wire Wire Line
+	4100 3700 4300 3700
+Connection ~ 4100 4100
+Wire Wire Line
+	4300 4300 4100 4300
+Wire Wire Line
+	4100 4300 4100 4400
+Wire Wire Line
+	4100 4400 4300 4400
+Wire Wire Line
+	4100 4400 4100 4500
+Connection ~ 4100 4400
+$Comp
+L Device:C C1
+U 1 1 5C95E2D6
+P 3850 4250
+F 0 "C1" H 3965 4296 50  0000 L CNN
+F 1 "220n" H 3800 4450 50  0000 L CNN
+F 2 "" H 3888 4100 50  0001 C CNN
+F 3 "~" H 3850 4250 50  0001 C CNN
+	1    3850 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 4400 3850 4400
+Wire Wire Line
+	3850 4100 4100 4100
+Text Notes 5400 3600 0    50   ~ 0
+3V3 operation
+$Comp
+L Device:C C5
+U 1 1 5C95E713
+P 7000 4350
+F 0 "C5" H 7115 4441 50  0000 L CNN
+F 1 "47nF" H 7115 4350 50  0000 L CNN
+F 2 "" H 7038 4200 50  0001 C CNN
+F 3 "~" H 7000 4350 50  0001 C CNN
+F 4 "50V" H 7115 4259 50  0000 L CNN "Voltage"
+	1    7000 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 5C95E9D2
+P 7750 4050
+F 0 "C6" H 7865 4096 50  0000 L CNN
+F 1 "47nF" H 7865 4005 50  0000 L CNN
+F 2 "" H 7788 3900 50  0001 C CNN
+F 3 "~" H 7750 4050 50  0001 C CNN
+	1    7750 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5C95EDD0
+P 7400 4200
+F 0 "R2" H 7470 4291 50  0000 L CNN
+F 1 "68R" H 7470 4200 50  0000 L CNN
+F 2 "" V 7330 4200 50  0001 C CNN
+F 3 "~" H 7400 4200 50  0001 C CNN
+F 4 "1W" H 7470 4109 50  0000 L CNN "Power"
+	1    7400 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 4000 7400 4050
+Wire Wire Line
+	7000 4500 7000 4650
+Wire Wire Line
+	7000 4650 7400 4650
+Wire Wire Line
+	7400 4650 7400 4350
+Wire Wire Line
+	7400 4650 7750 4650
+Wire Wire Line
+	7750 4650 7750 4200
+Connection ~ 7400 4650
+Wire Wire Line
+	7750 4650 8200 4650
+Connection ~ 7750 4650
+$Comp
+L Device:C C3
+U 1 1 5C95FE63
+P 5950 2750
+F 0 "C3" H 6065 2796 50  0000 L CNN
+F 1 "10nF" H 6065 2705 50  0000 L CNN
+F 2 "" H 5988 2600 50  0001 C CNN
+F 3 "~" H 5950 2750 50  0001 C CNN
+	1    5950 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 2700 5750 2700
+Wire Wire Line
+	5750 2700 5750 2800
+Wire Wire Line
+	5400 2600 5950 2600
+Wire Wire Line
+	5950 2900 5750 2900
+Connection ~ 5950 2600
+$Comp
+L Device:Crystal Y1
+U 1 1 5C963A0D
+P 3450 3000
+F 0 "Y1" H 3300 2950 50  0000 C CNN
+F 1 "4.9152MHz" H 3450 2850 50  0000 C CNN
+F 2 "" H 3450 3000 50  0001 C CNN
+F 3 "~" H 3450 3000 50  0001 C CNN
+	1    3450 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 3100 3650 3200
+Wire Wire Line
+	3650 3200 3200 3200
+Wire Wire Line
+	3200 3200 3200 3000
+Wire Wire Line
+	3200 3000 3300 3000
+Text HLabel 4050 2700 0    50   Input ~ 0
+RxD
+Text HLabel 4050 2800 0    50   Output ~ 0
+TxD
+Wire Wire Line
+	4050 2800 4300 2800
+Wire Wire Line
+	4050 2700 4300 2700
+NoConn ~ 5400 4100
+Text HLabel 4050 2600 0    50   BiDi ~ 0
+RESn
+Wire Wire Line
+	4050 2600 4300 2600
+Text HLabel 8550 4650 2    50   BiDi ~ 0
+EIB_A
+Wire Wire Line
+	5400 2800 5750 2800
+Connection ~ 5750 2800
+Wire Wire Line
+	5750 2800 5750 2900
+Wire Wire Line
+	4300 4500 4100 4500
+Connection ~ 4100 4500
+Wire Wire Line
+	4300 3300 4100 3300
+Wire Wire Line
+	4100 3300 4100 3400
+Connection ~ 4100 3700
+Text Notes 4250 3300 2    50   ~ 0
+115200Baud
+NoConn ~ 4300 2900
+Text HLabel 4050 2500 0    50   Output ~ 0
+BUS_OFFn
+Wire Wire Line
+	4050 2500 4300 2500
+Wire Wire Line
+	4300 3400 4100 3400
+Connection ~ 4100 3400
+Wire Wire Line
+	4100 3400 4100 3700
+$Comp
+L Device:L L1
+U 1 1 5C97270B
+P 5650 3800
+F 0 "L1" V 5700 3650 50  0000 C CNN
+F 1 "220uH" V 5600 3800 50  0000 C CNN
+F 2 "" H 5650 3800 50  0001 C CNN
+F 3 "~" H 5650 3800 50  0001 C CNN
+	1    5650 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5400 3900 7750 3900
+Wire Wire Line
+	5400 4000 7400 4000
+Wire Wire Line
+	5400 4200 7000 4200
+Wire Wire Line
+	6800 2900 5950 2900
+Connection ~ 5950 2900
+$Comp
+L Device:C C4
+U 1 1 5C97E716
+P 6300 4400
+F 0 "C4" H 6250 4500 50  0000 R CNN
+F 1 "10u" H 6250 4300 50  0000 R CNN
+F 2 "" H 6338 4250 50  0001 C CNN
+F 3 "~" H 6300 4400 50  0001 C CNN
+	1    6300 4400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5400 3800 5500 3800
+Wire Wire Line
+	6300 3700 6300 4250
+Wire Wire Line
+	5400 3700 5850 3700
+Wire Wire Line
+	5800 3800 5850 3800
+Wire Wire Line
+	5850 3800 5850 3700
+Connection ~ 5850 3700
+Wire Wire Line
+	5850 3700 6300 3700
+Text HLabel 6400 2600 2    50   Output ~ 0
++3V3
+Connection ~ 6300 3700
+Wire Wire Line
+	6300 3700 6300 2600
+Wire Wire Line
+	6300 2600 5950 2600
+Wire Wire Line
+	6300 2600 6400 2600
+Connection ~ 6300 2600
+Text HLabel 5900 3200 2    50   Output ~ 0
+V20
+Wire Wire Line
+	5400 3200 5900 3200
+Wire Wire Line
+	5400 3600 6800 3600
+Connection ~ 6800 3600
+Wire Wire Line
+	6800 3600 6800 2900
+$Comp
+L Device:R R1
+U 1 1 5C988883
+P 5700 3100
+F 0 "R1" V 5493 3100 50  0000 C CNN
+F 1 "DNP" V 5584 3100 50  0000 C CNN
+F 2 "" V 5630 3100 50  0001 C CNN
+F 3 "~" H 5700 3100 50  0001 C CNN
+	1    5700 3100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5850 3100 5950 3100
+Wire Wire Line
+	5950 3100 5950 2900
+Wire Wire Line
+	5400 3100 5550 3100
+NoConn ~ 5400 3000
+Wire Wire Line
+	4300 3200 3700 3200
+Wire Wire Line
+	3650 3100 4300 3100
+Wire Wire Line
+	3600 3000 4300 3000
+$Comp
+L Device:C C2
+U 1 1 5C994DB0
+P 5750 3400
+F 0 "C2" V 5700 3250 50  0000 C CNN
+F 1 "220n" V 5800 3250 50  0000 C CNN
+F 2 "" H 5788 3250 50  0001 C CNN
+F 3 "~" H 5750 3400 50  0001 C CNN
+	1    5750 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6000 3300 6000 3400
+Wire Wire Line
+	5400 3500 6000 3500
+Wire Wire Line
+	5400 3300 6000 3300
+Wire Wire Line
+	5400 3400 5600 3400
+Wire Wire Line
+	5900 3400 6000 3400
+Connection ~ 6000 3400
+Wire Wire Line
+	6000 3400 6000 3500
+Wire Wire Line
+	5400 2500 8200 2500
+Wire Wire Line
+	8200 2500 8200 4650
+Connection ~ 8200 4650
+Wire Wire Line
+	8200 4650 8550 4650
+Text Notes 9350 5250 2    50   ~ 10
+Supressor circuit must be placed external
+Wire Wire Line
+	6300 4950 6000 4950
+Wire Wire Line
+	3700 3200 3700 4950
+Wire Wire Line
+	4100 4500 4100 4600
+Connection ~ 4100 4950
+Wire Wire Line
+	4300 4600 4100 4600
+Connection ~ 4100 4600
+Wire Wire Line
+	4100 4600 4100 4950
+Text HLabel 8550 4950 2    50   BiDi ~ 0
+EIB_B
+Connection ~ 6300 4950
+Wire Wire Line
+	3700 4950 4100 4950
+Text HLabel 4100 5100 3    50   Input ~ 0
+GND
+Wire Wire Line
+	4100 5100 4100 4950
+$Comp
+L Device:C 330uF
+U 1 1 5C96F2CC
+P 6000 4400
+F 0 "330uF" H 6050 4500 50  0000 L CNN
+F 1 "C" H 6050 4300 50  0000 L CNN
+F 2 "" H 6038 4250 50  0001 C CNN
+F 3 "~" H 6000 4400 50  0001 C CNN
+	1    6000 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C 10nF
+U 1 1 5C96F324
+P 5700 4400
+F 0 "10nF" H 5750 4500 50  0000 L CNN
+F 1 "C" H 5750 4300 50  0000 L CNN
+F 2 "" H 5738 4250 50  0001 C CNN
+F 3 "~" H 5700 4400 50  0001 C CNN
+	1    5700 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 3500 6000 4250
+Connection ~ 6000 3500
+Wire Wire Line
+	6000 4550 6000 4950
+Connection ~ 6000 4950
+Wire Wire Line
+	6000 4950 5700 4950
+Wire Wire Line
+	5700 4550 5700 4950
+Connection ~ 5700 4950
+Wire Wire Line
+	5700 4950 4100 4950
+Wire Wire Line
+	5700 4250 6000 4250
+Connection ~ 6000 4250
+$Comp
+L Device:C 10nF
+U 1 1 5C976F72
+P 6600 4400
+F 0 "10nF" H 6650 4500 50  0000 L CNN
+F 1 "C" H 6650 4300 50  0000 L CNN
+F 2 "" H 6638 4250 50  0001 C CNN
+F 3 "~" H 6600 4400 50  0001 C CNN
+	1    6600 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 4550 6300 4950
+Wire Wire Line
+	6800 3600 6800 4950
+Connection ~ 6800 4950
+Wire Wire Line
+	6800 4950 8550 4950
+Connection ~ 6300 4250
+Wire Wire Line
+	6600 4250 6300 4250
+Wire Wire Line
+	6300 4950 6600 4950
+Wire Wire Line
+	6600 4550 6600 4950
+Connection ~ 6600 4950
+Wire Wire Line
+	6600 4950 6800 4950
+$EndSCHEMATC
