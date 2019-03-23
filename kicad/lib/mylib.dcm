@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TPUART2+
+D KNX/EIB Transceiver
+K KNX EIB Transceiver
+F /home/steve/prj/knxmeter/documentation/datasheet/TPUART2__Datenblatt_20130806.pdf
+$ENDCMP
+#
+#End Doc Library
